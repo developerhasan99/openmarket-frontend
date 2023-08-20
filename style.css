@@ -1,0 +1,24 @@
+:root {
+	--color-primary: #e6332a;
+	--color-primary-h: 3;
+	--color-primary-s: 79%;
+	--color-primary-l: 53%;
+}
+
+html {
+	font-family: Roboto, sans-serif !important;
+}
+
+.fileuploader,
+.fileuploader-popup {
+	font-family: Roboto, sans-serif !important;
+}
+
+.old-tables tbody tr td {
+	padding-bottom: 12px;
+	padding-top: 12px;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
