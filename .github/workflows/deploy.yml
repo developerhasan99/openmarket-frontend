@@ -77,6 +77,7 @@ jobs:
           sed -i 's|src="/main.js"|src="/openmarket-frontend/assets/index.js"|g' dist/*.html
           sed -i 's|src="/images/|src="/openmarket-frontend/images/|g' dist/*.html
           sed -i 's|href="/images/|href="/openmarket-frontend/images/|g' dist/*.html
+          sed -i "s|bg-\[url('images/|bg-\[url('/openmarket-frontend/images/|g" dist/*.html
           sed -i '/<\/head>/i \          <link rel="stylesheet" href="/openmarket-frontend/assets/index.css" />' dist/*.html
         working-directory: ${{ env.BUILD_PATH }}
 
