@@ -71,6 +71,13 @@ jobs:
         run: cp *.html dist/
         working-directory: ${{ env.BUILD_PATH }}
 
+      - name: Update paths in HTML files
+        run: |
+          sed -i 's|href="/vite.svg"|href="/openmarket-frontend/vite.svg"|g' dist/*.html
+          sed -i 's|src="/main.js"|src="/openmarket-frontend/assets/index.js"|g' dist/*.html
+          sed -i '/<\/head>/i \          <link rel="stylesheet" href="/openmarket-frontend/assets/index.css" />' dist/*.html
+        working-directory: ${{ env.BUILD_PATH }}
+
       - name: Upload build artifacts
         uses: actions/upload-pages-artifact@v3
         with:
