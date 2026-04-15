@@ -5,8 +5,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        assetFileNames: "assets/index.css",
-        entryFileNames: "assets/index.js",
+        assetFileNames: "assets/[name][extname]",
+        entryFileNames: "assets/[name][extname]",
       },
     },
   },
